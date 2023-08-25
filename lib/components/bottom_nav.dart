@@ -1,30 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:music_app/search_page.dart';
+import 'package:music_app/screens/search_page.dart';
 
 class BottomNav extends StatefulWidget {
   const BottomNav({super.key});
 
   @override
-  State<BottomNav> createState() =>
-      _BottomNaviState();
+  State<BottomNav> createState() => _BottomNaviState();
 }
 
-class _BottomNaviState
-    extends State<BottomNav> {
+class _BottomNaviState extends State<BottomNav> {
   int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+  // static const TextStyle optionStyle =
+  //     TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
-    
     Text(
       'Index 0: Home',
-      style: optionStyle,
+      // style: optionStyle,
     ),
-    // SearchBarApp(),
-    SearchMusicBar(),
+    SearchScreen(),// Screen 2
     Text(
       'Index 2: Dashboard',
-      style: optionStyle,
+      // style: optionStyle,
     ),
   ];
 
@@ -37,9 +33,6 @@ class _BottomNaviState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('BottomNavigationBar Sample'),
-      ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
@@ -73,5 +66,3 @@ class _BottomNaviState
     );
   }
 }
-
-

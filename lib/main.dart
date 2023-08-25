@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './bottom_nav.dart';
+import 'components/bottom_nav.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -11,9 +11,9 @@ class MyApp extends StatelessWidget{
   Widget build(BuildContext context) {
     return const MaterialApp(
       home: SafeArea(
-        child: Scaffold(
-          body: BottomNav(),
-        ),
+          child: Scaffold(
+            body: BottomNav(),
+          ),
       ),
       debugShowCheckedModeBanner: false,
     );

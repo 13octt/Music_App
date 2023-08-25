@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:music_app/search_page.dart';
 
 class BottomNav extends StatefulWidget {
   const BottomNav({super.key});
@@ -14,14 +15,13 @@ class _BottomNaviState
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
+    
     Text(
       'Index 0: Home',
       style: optionStyle,
     ),
-    Text(
-      'Index 1: Search',
-      style: optionStyle,
-    ),
+    // SearchBarApp(),
+    SearchMusicBar(),
     Text(
       'Index 2: Dashboard',
       style: optionStyle,
@@ -73,3 +73,5 @@ class _BottomNaviState
     );
   }
 }
+
+
